@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Results Summary Component</title>
   </head>
   <body>
@@ -16,35 +16,60 @@
           <h1>76</h1>
           <p>of 100</p>
         </div>
-        <h2 class="result-secondary-title">Great</h2>
-        <p>
-          You scored higher than 65% of the people who have taken these tests.
-        </p>
+        <div class="result-info-box">
+          <h2 class="result-secondary-title">Great</h2>
+          <p class="result-paragraph">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
       </section>
       <section class="summary-section">
         <div class="summary-main-title">
           <h2>Summary</h2>
         </div>
         <div class="summary-results-box">
-          <div class="summary-result">
-            <img src="assets/images/icon-reaction.svg" alt="" />
-            <h4>Reaction</h4>
-            <p>80 / 100</p>
+          <div class="summary-result reaction">
+            <div class="sm-box-title">
+              <img src="assets/images/icon-reaction.svg" alt="" />
+              <h4>Reaction</h4>
+            </div>
+
+            <div class="sm-box-result">
+              <p>
+                <span class="reached-score">80</span> /
+                <span class="max-score">100</span>
+              </p>
+            </div>
           </div>
-          <div class="summary-result">
-            <img src=assets/images/icon-memory.svg"" />
-            <h4>Memory</h4>
-            <p>92 / 100</p>
+          <div class="summary-result memory">
+            <div class="sm-box-title">
+              <img src="assets/images/icon-memory.svg" />
+              <h4>Memory</h4>
+            </div>
+            <p>
+              <span class="reached-score">92</span> /
+              <span class="max-score">100</span>
+            </p>
           </div>
-          <div class="summary-result">
-            <img src="assets/images/" alt="" />
-            <h4>Verbal</h4>
-            <p>61 / 100</p>
+          <div class="summary-result verbal">
+            <div class="sm-box-title">
+              <img src="assets/images/icon-verbal.svg" alt="" />
+              <h4>Verbal</h4>
+            </div>
+            <p>
+              <span class="reached-score">61</span> /
+              <span class="max-score">100</span>
+            </p>
           </div>
-          <div class="summary-result">
-            <img src="" alt="" />
-            <h4>Visual</h4>
-            <p>72 / 100</p>
+          <div class="summary-result visual">
+            <div class="sm-box-title">
+              <img src="assets/images/icon-visual.svg" alt="" />
+              <h4>Visual</h4>
+            </div>
+            <p>
+              <span class="reached-score">72</span> /
+              <span class="max-score">100</span>
+            </p>
           </div>
         </div>
         <div class="button-box">
