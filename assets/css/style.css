@@ -1,6 +1,20 @@
-@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;0,700;0,800;1,500;1,700;1,800&display=swap");
+@font-face {
+  font-family: "HankenGrotesk";
+  font-display: swap;
+  font-weight: 100 900;
+  src: url("../fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+}
 
 :root {
+  --opacity-primary-light-red: 0, 100%, 67%;
+  --opacity-primary-yellow: 39, 100%, 56%;
+  --opacity-primary-green: 166, 100%, 37%;
+  --opacity-primary-cobalt-blue: 234, 85%, 45%;
+  --opacity-neutral-white: 0, 0%, 100%;
+  --opacity-neutral-pale-blue: 221, 100%, 96%;
+  --opacity-neutral-light-lavender: 241, 100%, 89%;
+  --opacity-neutral-dark-gray-blue: 224, 30%, 27%;
+
   --primary-light-red: hsl(0, 100%, 67%);
   --primary-yellow: hsl(39, 100%, 56%);
   --primary-green: hsl(166, 100%, 37%);
@@ -8,11 +22,9 @@
   --neutral-white: hsl(0, 0%, 100%);
   --neutral-pale-blue: hsl(221, 100%, 96%);
   --neutral-light-lavender: hsl(241, 100%, 89%);
-  --neutral-light-lavender-low-opacity: hsla(241, 100%, 89%, 0.6);
   --neutral-dark-gray-blue: hsl(224, 30%, 27%);
-  --neutral-dark-gray-blue-low-opacity: hsla(224, 30%, 27%, 0.5);
+
   --main-linear-gradient: linear-gradient(
-    to bottom,
     hsl(252, 100%, 67%),
     hsl(241, 81%, 54%)
   );
@@ -20,7 +32,9 @@
     hsla(256, 72%, 46%, 1),
     hsla(241, 72%, 46%, 0)
   );
+
   --main-font-size: 1.125rem;
+  --main-font-family: "HankenGrotesk";
   --fw-neutral: 500;
   --fw-bold: 700;
   --fw-extra-bold: 800;
@@ -46,51 +60,45 @@ main {
   background: var(--neutral-white);
   border-radius: 2rem;
   gap: 1.25rem;
-  box-shadow: 2px 2px 5px rgba(80, 79, 79, 0.1);
+  box-shadow: 2px 2px 5px rgba(80, 79, 79, 0.2);
+  margin: 0 1rem;
 }
 
 .result-section {
-  padding: 1rem;
+  width: 50%;
+  text-align: center;
   border-radius: 2rem;
   background: var(--main-linear-gradient);
-  width: 50%;
+  color: hsla(var(--opacity-neutral-light-lavender), 0.7);
 }
 
-.result-main-title {
-  margin: 1rem 0 2rem 0;
-  text-align: center;
+.result-section,
+.summary-section {
+  padding: 2rem 0;
 }
 
-.summary-main-title {
-  margin: 1rem 0 2rem 0;
-}
-
-.result-main-title h2 {
-  color: var(--neutral-light-lavender);
-}
-
-.summary-main-title h2 {
-  color: var(--neutral-dark-gray-blue);
+.main-titles {
+  font-size: var(--main-font-size);
+  font-weight: var(--fw-bold);
 }
 
 .result-box {
   display: grid;
   place-content: center;
-  text-align: center;
-  margin: 0 auto;
   width: 50%;
+  margin: 2rem auto;
   aspect-ratio: 1 / 1;
   background: var(--secondary-linear-gradient);
   border-radius: 50%;
 }
 
-.result-box h1 {
+.result-box span {
   color: var(--neutral-white);
-  font-size: 4.65rem;
+  font-size: 5rem;
 }
 
 .result-box p {
-  color: var(--neutral-light-lavender-low-opacity);
+  color: hsla(var(--opacity-neutral-light-lavender), 0.5);
   font-weight: var(--fw-bold);
 }
 
@@ -113,7 +121,6 @@ main {
 }
 
 .summary-section {
-  padding: 1rem;
   width: 50%;
 }
 
@@ -198,6 +205,8 @@ main {
     display: block;
     background: var(--neutral-white);
     border-radius: 0;
+    margin: 0;
+    width: 100%;
   }
 
   .result-section {
@@ -214,7 +223,8 @@ main {
     width: 95%;
   }
 
-  .summary-main-title h2 {
+  h2 {
+    padding: 0 1.25rem;
     font-size: 1.35rem;
   }
 
@@ -223,7 +233,8 @@ main {
   }
 
   .summary-result {
-    width: 100%;
+    width: 90%;
+    margin: 1.25rem auto;
   }
 
   .button-box {
