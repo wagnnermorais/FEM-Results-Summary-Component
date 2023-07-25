@@ -108,13 +108,14 @@ main {
   font-size: var(--main-font-size);
 }
 
-.result-info-box h2 {
+.result-info-box-title {
   font-size: 2rem;
+  font-weight: var(--fw-bold);
   color: var(--neutral-white);
   margin: 1.5rem 0 1rem 0;
 }
 
-.result-info-box p {
+.result-info-box-p {
   max-width: 70%;
   margin: 0.5rem auto 2rem;
   font-size: var(--main-font-size);
@@ -123,6 +124,10 @@ main {
 
 .summary-section {
   width: 50%;
+}
+
+.summary-title {
+  color: hsla(var(--opacity-neutral-dark-gray-blue), 0.9);
 }
 
 .summary-results-box {
