@@ -95,6 +95,7 @@ main {
 .result-box span {
   color: var(--neutral-white);
   font-size: 5rem;
+  font-weight: var(--fw-extra-bold);
 }
 
 .result-box p {
